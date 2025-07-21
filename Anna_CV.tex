@@ -7,6 +7,7 @@
 \usetikzlibrary{backgrounds}
 \usepackage[colorlinks=true,allcolors=black,breaklinks=true]{hyperref}
 \usepackage{color}
+\usepackage{xcolor}
 \usepackage{array}
 \usepackage{graphics}
 \usepackage{titlesec}
@@ -23,7 +24,9 @@
 
 % Top banner background
 \colorlet{banerColor}{gray!10}
-\definecolor{SwishLineColour}{HTML}{007ae0}
+%\definecolor{SwishLineColour}{HTML}{007ae0}
+\definecolor{mauveClair}{RGB}{204,153,255}
+\definecolor{mauveMoyen}{RGB}{153,102,204}
 
 \newcommand{\drawBaner}{%
 	\begin{tikzpicture}[remember picture, overlay]
@@ -31,13 +34,13 @@
 	\end{tikzpicture}%
 }
 \newcommand{\liner}{\begin{tikzpicture}[remember picture,overlay]%\
-		\fill[left color=cyan, right color=white,white] (0,-0.5pt) rectangle (\linewidth,-2pt);
+		\fill[left color=mauveClair, right color=white,white] (0,-0.5pt) rectangle (\linewidth,-2pt);
 		\end{tikzpicture}}
 %\titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
 \titleformat{\section}[display]{\Large\bfseries}{}{0pt}{\liner}[\vspace*{-5pt}]
 
-\newcommand{\slink}[1]{\underline{\smash{\color{cyan}#1}}}
-\newcommand{\link}[1]{\href{#1}{\color{cyan}\faGlobe}}
+\newcommand{\slink}[1]{\underline{\smash{\color[RGB]{153,102,204}#1}}}
+\newcommand{\link}[1]{\href{#1}{\color[RGB]{153,102,204}\faGlobe}}
 
 
 
@@ -91,20 +94,25 @@
 \begin{minipage}{\linewidth}
 	\begin{center}
 		\bfseries
-		Anna Stefano NARIVELOMANANA - Mathematician/ Teacher / Python developer
+		Anna Stefano NARIVELOMANANA 
+		%Mathematician/ Teacher / Python developer
 	\end{center}
 	\hfil\begin{minipage}{0.65\linewidth}
 		\cvInfo{\faUser}{Born in 7 April 1998, Ambohidratrimo, Antananarivo, Madagascar}
 
 		\cvInfo{\faHome}{Logt 146 cité Akany Firaisana Antananarivo}
 
-		\cvInfo{\faHome}{P.O BOX  608,Crystal Gardens, Limbe Cameroon}
+		%\cvInfo{\faHome}{P.O BOX  608,Crystal Gardens, Limbe Cameroon}
 
 		\cvInfo{\faEnvelope}{\slink{\href{anna.narivelomanana@aims-cameroon.org}{\slink{anna.narivelomanana@aims-cameroon.org}}}}
 		
-		Homepage : {\slink{nanasteff.github.io/}}
+		Homepage:{\slink{\href{https://nanasteff.github.io/}{\slink{nanasteff.github.io/}}}}
+		
+		%\href{https://nanasteff.github.io/}{nanasteff.github.io}
+		
+		%Homepage : {\slink{nanasteff.github.io/}}
 	\end{minipage}\begin{minipage}{0.7\linewidth}
-		\cvInfo{\faPhone}{\ttfamily+237 692 365 026/+261 348 189 668}
+		\cvInfo{\faPhone}{\ttfamily+261 348 189 668}(Signal)
 
 		\cvInfo{\faGithub}{\slink{\href{https://github.com/NanaSteff}{\slink{NanaSteff}}}}
 
@@ -115,20 +123,38 @@
 	\end{minipage}\hfil
 \end{minipage}
 
-\section{Summary}
-I am a student in mathematics. I am very interested in maths generally based in the field of cryptography, algebra and number theory, and also in computing. Currently, I am doing my master's thesis on the stream cipher family of cryptography. I am self-taught in programming with Python 3, generally based on Gérard Swinnen's book, and am currently very passionate about computing technologies. I also have a strong interest in IT security. I am motivated, dynamic, serious, and creative, and I am a problem solver.
+%\section{Summary}
+%I am a student in mathematics with a strong interest in information security. I am very interested in maths generally based in the field of cryptography, algebra and number theory, and also in computing. Currently, I am a new graduate from AIMS Cameroon, and I did a master's thesis on the stream cipher family of cryptography. I am self-taught in programming with Python 3, generally based on Gérard Swinnen's book, and am currently very passionate about computing technologies. I am motivated, dynamic, serious, and creative, and I am a problem solver.
+
+%I am a recent mathematics graduate from AIMS Cameroon. I am interested in security and privacy. Currently, I completed a 3 weeks intensive bootcamp program offered by Tech4dev providing an introduction to cybersecurity. I have taken cryptography courses and my Master's thesis at AIMS focused on stream ciphers and the Berlekamp-Massey algorithm under the supervision of Dr. Giulio Codogni from Tor Vergata University of Roma. I explored algebraic techniques for constructing and breaking stream cipher cryptosystems. I have strong Python programming skills and practical experience with RSA encryption. I use Git and GitHub for version control. I am comfortable with Linux and completed a web development bootcamp where I created my own portfolio. 
+
+%I graduated with a Master's degree in Fundamental Mathematics from AIMS Cameroon in June 2023. As part of my degree requirement, I competed a thesis on Stream Cipher Cryptography and the Berlekamp-Massey algorithm under the supervision of Dr. Giulio Codogni from Tor Vergata University of Roma. I explored an algebraic techniques for constructing and breaking stream cipher cryptosystems. I have a strong Python programming skills and practical experience with RSA encryption. I use Git and GitHub for version control. I am comfortable with Linux and completed a web development bootcamp where I created my own portfolio.
 
 \section{Education}
 \cvEduc{2022 -- 2023}{Structured Master, Fundamental Science Stream}{African Institute of Mathematical Science Cameroon.}
 
-\cvEduc{2019 -- 2020}{Master 1, in Mathematical Education}{Ecole Normale Supérieure, University of Antananarivo, Madagascar.}
+\cvEduc{2020 -- 2022}{Master 1, in Mathematical Education}{Ecole Normale Supérieure, University of Antananarivo, Madagascar.}
 
-\cvEduc{2016 -- 2019}{Bachelor degree, in Mathematical Education}{Ecole Normale Supérieure, University of Antananarivo, Madagascar.}
+\cvEduc{2016 -- 2020}{Bachelor degree, in Mathematical Education}{Ecole Normale Supérieure, University of Antananarivo, Madagascar.}
 
-\cvEduc{2014 -- 2015}{Baccalaureate, série C}{Lycée Joseph Ravoahangy Andrianavalona Antananarivo, Madagascar.}
+\cvEduc{2014 -- 2015}{Baccalauréat, série C}{Lycée Joseph Ravoahangy Andrianavalona Antananarivo, Madagascar.}
+
+\section{Conference}
+\cvWP{19 Feb. 2025}{1st Microarchitecture Security Conference}{}{Ruhr University, Bochum, Germany}
+
+\section{Internships}
+\cvEduc{Mar 2024 -- Feb 2025}{Research Internship on Multivariate-based Post-Quantum Cryptography Implementation}{Max Planck Institute for Security and Privacy, Bochum, Germany}
+
+\cvWP{Jan.-Feb. 2020}{Mathematics Teaching Internship}{Course of study}{CEG 67Ha Betsimitatatra.}
+
+\section{Schools}
+
+\cvWP{Jun 2024}{Summer School on Real-World Crypto and Privacy 2024}{MPI-SP}{Vodice, Croatia}
+
+\cvWP{Dec 2023}{Research School on Post-Quantum Cryptography}{CIMPA School}{Pondicherry University, India}
 
 \section{Project and work}
-\cvWP{Currently}{Research~on~advanced~stream~cipher~cryptography}{AIMS Cameroon}{Supervised by Prof. Giulio Codogni, University of Roma Tor Vergata.}
+\cvWP{2023}{Research~on~advanced~stream~cipher~cryptography}{AIMS Cameroon}{Supervised by Dr. Giulio Codogni, University of Roma Tor Vergata.}
 
 \cvWP{2023}{Personal website \link{https://nanasteff.github.io/}}{Personal project}{An portfolio written in html, JavaScript and Bootstrap}
 
@@ -138,90 +164,107 @@ I am a student in mathematics. I am very interested in maths generally based in 
 
 \cvWP{2023}{RSA cryptosystem \link{https://github.com/NanaSteff/Tkinter_RSA_code} }{Personal project}{A graphical interface for the RSA cryptosystem (encryption and decryption) made with Python3/Tkinter.}
 
-\cvWP{2022}{Olympic flag \link{https://github.com/NanaSteff/olympique_flag}}{Personal project}{It's a drawing of the Olympic flag on the python graphical interface Tkinter.}
+%\cvWP{2022}{Olympic flag \link{https://github.com/NanaSteff/olympique_flag}}{Personal project}{It's a drawing of the Olympic flag on the python graphical interface Tkinter.}
 %
-\section{Experience}
-\cvWP{Jan.-Feb. 2020}{Teaching internship mathematics}{Course of study}{CEG 67Ha Betsimitatatra.}
-
+\header
 \section{Extra training}
+\cvEduc{Sept-Oct 2023}{Cybersecurity bootcamp by Women Techsters}{HashCheck, Zphisher, John The Ripper.}
 \cvEduc{June 2022}{Initiation to website development at Orange Digital Center Madagascar}{Html, CSS, MySQL, PHP.}
 
-\header
+%\header
 
-\section{Extra activities}
+%\section{Extra activities}
 
-\cvEduc{June 2022}{Member of a tree data collection team in a forest}{Mantadia Park, Andasibe, Madagascar}
+%\cvEduc{June 2022}{Member of a tree data collection team in a forest}{Mantadia Park, Andasibe, Madagascar}
 
-\cvEduc{May 2022}{Sharing session about algorithm and initiation to python programming}{Y-Tech club at YMCA Madagascar}
+%\cvEduc{May 2022}{Sharing session about algorithm and initiation to Python programming}{Y-Tech club at YMCA Madagascar}
 
 \section{Skills}
-\cvitem{Languages}{English (high intermediate), French (advanced), German (low intermediate), Malagasy (native).}
+\cvitem{Languages}{Malagasy, English, French, German (low intermediate), Python, R, \LaTeX, SageMath.}
 
-\cvitem{Coding}{Python, R, \LaTeX, SageMath.}
+%\cvitem{Coding}{Python, R, \LaTeX, SageMath.}
 
-\cvitem{Framework and library}{Pandas, Numpy, Scipy, Sympy.}
+\cvitem{Libraries}{Pandas, Numpy, Scipy, Sympy.}
 
-\section{Extracurricular and interest}
-\cvitem{2023}{Leader of give-back team which mentors children in S.T.E.M. (Science, Technology, Engineering, and Mathematics), Save the Children Orphanage, Limbe, Cameroon.}
+\section{Extracurricular}
+\cvEduc{June 2022}{Member of a tree data collection team in a forest}{Mantadia Park, Andasibe, Madagascar}
 
-\cvitem{Clubs}{Gender and library clubs at AIMS Cameroon.}
+\cvEduc{May 2022}{Sharing session about algorithm and initiation to Python programming}{Y-Tech club at YMCA Madagascar}
 
-\cvitem{Feb.-Jun. 2022}{Y-Tech club member at YMCA Madagascar}
+\cvEduc{2023}{Leader of give-back team which mentors children in S.T.E.M.}{Save the Children Orphanage,
+	 Limbe, Cameroon.}
 
-\cvitem{Other}{Singing, swimming, walking in the forest and exploring nature.}
+\cvEduc{Clubs}{Gender and library clubs member at AIMS Cameroon.}
+
+\cvEduc{Feb.-Jun. 2022}{Y-Tech club member at YMCA Madagascar}
+
+%\cvitem{Other}{Singing, swimming, walking in the forest and exploring nature.}
 
 \section{References}
+
+\cvRefTitle{Dr. Peter Schwabe}{Scientific Director}
+
+\cvRefEntry{Max Planck Institute for Security and Privacy}
+
+%\cvRefEntry{Universitätsstraße 140, 44799 Bochum, Germany}
+
+\cvRefEntry{Homepage : \href{https://cryptojedi.org/peter/index.shtml}{\color{mauveMoyen}\underline{https://cryptojedi.org/peter/index.shtml}}}
+
+\cvRefEntry{Email: \href{mailto:peter@cryptojedi.org}{\color{mauveMoyen}\underline{peter@cryptojedi.org}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace*{15pt}
+
 \cvRefTitle{Dr. Giulio Codogni}{Professor of Mathematics and Cryptography}
 
-\cvRefEntry{Department of Mathematics}
+%\cvRefEntry{Department of Mathematics}
 
 \cvRefEntry{University of Rome Tor Vergata}
 
-\cvRefEntry{Street of Scientific Research 1
-	00133 Rome, Italy}
+%\cvRefEntry{Street of Scientific Research 1, 00133 Rome, Italy}
 
-\cvRefEntry{Home page : \href{https://sites.google.com/view/giuliocodogni/home-page?authuser=0}{\color{blue}\underline{https://sites.google.com/view/giuliocodogni/home-page?authuser=0}}}
+\cvRefEntry{Homepage : \href{https://sites.google.com/view/giuliocodogni/home-page?authuser=0}{\color{mauveMoyen}\underline{https://sites.google.com/view/giuliocodogni/home-page?authuser=0}}}
 
 %\cvRefEntry{Phone: +49 761 203 5830}
 
 %\cvRefEntry{Fax: +49 761 203 5967}
 
-\cvRefEntry{Email: \href{mailto:codogni@mat.uniroma2.it}{\color{blue}\underline{codogni@mat.uniroma2.it}}}
+\cvRefEntry{Email: \href{mailto:codogni@mat.uniroma2.it}{\color{mauveMoyen}\underline{codogni@mat.uniroma2.it}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \vspace*{15pt}
 \cvRefTitle{Dr. Andreas Buchleitner}{Professor of Theoretical Physics}
 
-\cvRefEntry{Department for Quantum Optics and Statistics}
+%\cvRefEntry{Department for Quantum Optics and Statistics}
 
 \cvRefEntry{Institute of Physics, Albert-Ludwigs-Universität Freiburg}
 
-\cvRefEntry{Hermann-Herder-Str. 3, D-79104 Freiburg}
+%\cvRefEntry{Hermann-Herder-Str. 3, D-79104 Freiburg}
 
-\cvRefEntry{Home page : \href{https://quantum.uni-freiburg.de/}{\color{blue}\underline{https://quantum.uni-freiburg.de/}}}
+\cvRefEntry{Homepage : \href{https://quantum.uni-freiburg.de/}{\color{mauveMoyen}\underline{https://quantum.uni-freiburg.de/}}}
 
 %\cvRefEntry{Phone: +49 761 203 5830}
 
 %\cvRefEntry{Fax: +49 761 203 5967}
 
-\cvRefEntry{Email: \href{mailto:a.buchleitner@physik.uni-freiburg.de}{\color{blue}\underline{a.buchleitner@physik.uni-freiburg.de}}}
+\cvRefEntry{Email: \href{mailto:a.buchleitner@physik.uni-freiburg.de}{\color{mauveMoyen}\underline{a.buchleitner@physik.uni-freiburg.de}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \vspace*{15pt}
 \cvRefTitle{Dr. Fortunat Rajaona Solofomampionona}{Research Fellow}
 
-\cvRefEntry{Department of Computer Science}
+%\cvRefEntry{Department of Computer Science}
 
 \cvRefEntry{Faculty of Engineering and Physical Sciences University of Surrey
 }
 
-\cvRefEntry{Guildford GU2 7XH, Surrey, United Kingdom}
+%\cvRefEntry{Guildford GU2 7XH, Surrey, United Kingdom}
 
-\cvRefEntry{Home page : \href{https://sfrajaona.github.io/home.html}{\color{blue}\underline{https://sfrajaona.github.io/home.html}}}
+\cvRefEntry{Homepage : \href{https://sfrajaona.github.io/home.html}{\color{mauveMoyen}\underline{https://sfrajaona.github.io/home.html}}}
 
 %\cvRefEntry{Phone: +49 761 203 5830}
 
 %\cvRefEntry{Fax: +49 761 203 5967}
 
-\cvRefEntry{Email: \href{mailto:s.rajaona@surrey.ac.uk}{\color{blue}\underline{s.rajaona@surrey.ac.uk}}}
+\cvRefEntry{Email: \href{mailto:s.rajaona@surrey.ac.uk}{\color{mauveMoyen}\underline{s.rajaona@surrey.ac.uk}}}
 \end{document}
